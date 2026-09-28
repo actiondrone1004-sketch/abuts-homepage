@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="assets/img/abuts-mark.svg" type="image/svg+xml">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>치과 이용 안내 | 어벗츠</title>
+  <meta name="description" content="치과가 abuts.fit에서 기공 의뢰를 접수하고, 의뢰 목록과 도착일 캘린더로 일정을 관리하고, 기공소와 소통하고 정산하는 방법을 실제 화면으로 안내합니다.">
+  <meta property="og:title" content="치과 이용 안내 | 어벗츠">
+  <meta property="og:description" content="치과가 abuts.fit에서 기공 의뢰를 접수하고, 의뢰 목록과 도착일 캘린더로 일정을 관리하고, 기공소와 소통하고 정산하는 방법을 실제 화면으로 안내합니다.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<!-- ===== 공통 헤더 (모든 페이지 동일. 현재 페이지 메뉴 <a>에만 aria-current="page") ===== -->
+<a class="skip-link" href="#main">본문으로 건너뛰기</a>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html" aria-label="abuts.fit 홈">
+      <img class="brand__logo" src="assets/img/abuts-mark.svg" alt="" width="40" height="40">
+      <span class="brand__word">abuts.fit</span>
+    </a>
+    <nav aria-label="주요 메뉴">
+      <ul class="nav-menu">
+        <li class="has-sub">
+          <a href="index.html" aria-haspopup="true" aria-current="page">어벗츠 소개</a>
+          <div class="sub">
+            <ul>
+              <li><a href="dental.html" aria-current="page">치과 이용 안내</a></li>
+              <li><a href="pricing.html">이용 방법 · 비용</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="has-sub">
+          <a href="simpleway.html" aria-haspopup="true">심플웨이 소개</a>
+          <div class="sub">
+            <ul>
+              <li><a href="simpleway.html">심플웨이 소개</a></li>
+              <li><a href="simpleway-surgical.html">수술 · Surgical Kit</a></li>
+              <li><a href="simpleway-abutment.html">힐링 · 어벗먼트</a></li>
+              <li><a href="simpleway-prosthetic.html">보철 · Prosthetic Kit</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="company.html">회사소개</a></li>
+        <li><a href="blog.html">블로그</a></li>
+        <li><a href="contact.html">문의</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn--ghost btn--sm" href="https://abuts.fit/login" rel="noopener">로그인</a>
+      <a class="btn btn--primary btn--sm" href="start.html">시작하기</a>
+    </div>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-mobile" aria-label="메뉴 열기">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+  <div class="nav-mobile" id="nav-mobile">
+    <div class="container">
+      <ul>
+        <li class="nav-mobile__group"><span>어벗츠 소개</span>
+          <ul>
+            <li><a href="index.html">어벗츠 소개</a></li>
+            <li><a href="dental.html" aria-current="page">치과 이용 안내</a></li>
+            <li><a href="pricing.html">이용 방법 · 비용</a></li>
+          </ul>
+        </li>
+        <li class="nav-mobile__group"><span>심플웨이 소개</span>
+          <ul>
+            <li><a href="simpleway.html">심플웨이 소개</a></li>
+            <li><a href="simpleway-surgical.html">수술 · Surgical Kit</a></li>
+            <li><a href="simpleway-abutment.html">힐링 · 어벗먼트</a></li>
+            <li><a href="simpleway-prosthetic.html">보철 · Prosthetic Kit</a></li>
+          </ul>
+        </li>
+        <li><a href="company.html">회사소개</a></li>
+        <li><a href="blog.html">블로그</a></li>
+        <li><a href="contact.html">문의</a></li>
+      </ul>
+      <div class="nav-mobile__cta">
+        <a class="btn btn--ghost" href="https://abuts.fit/login" rel="noopener">로그인</a>
+        <a class="btn btn--primary" href="start.html">시작하기</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ① 첫 화면 -->
+  <section class="dp">
+    <div class="container">
+      <nav aria-label="현재 위치">
+        <ol class="breadcrumb">
+          <li><a href="index.html">홈</a></li>
+          <li><a href="index.html">어벗츠 소개</a></li>
+          <li aria-current="page">치과 이용 안내</li>
+        </ol>
+      </nav>
+      <div class="dp__inner reveal">
+        <span class="dp-kicker">치과 이용 안내</span>
+        <h1 class="dp-title dp-title--xl">기공 의뢰와 일정,<br>한 화면에서 관리합니다.</h1>
+        <p class="dp-line">의뢰 접수부터 도착일 확인, 기공소와의 소통, 정산까지. 치과가 abuts.fit에서 하는 일입니다.</p>
+        <div class="dp-words">
+          <span class="dp-word">의뢰 접수</span>
+          <span class="dp-word">의뢰 목록</span>
+          <span class="dp-word">도착일 캘린더</span>
+          <span class="dp-word">기공소 메시지</span>
+          <span class="dp-word">정산 · 통계</span>
+        </div>
+        <figure class="imgfig aspect-21-9">
+          <img src="assets/img/platform/partnership.jpg" alt="치과의사와 기공사가 모니터의 구강 스캔 데이터를 함께 보는 장면." width="1400" height="933">
+          <figcaption>치과와 기공소가 같은 의뢰를 봅니다</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ② 이전 · 이후 -->
+  <section class="dp dp--soft">
+    <div class="container">
+      <div class="dp__inner">
+        <span class="dp-kicker">왜 플랫폼인가</span>
+        <h2 class="dp-title">흩어진 기공 일정,<br>한 곳으로 모읍니다.</h2>
+        <div class="dp-pair">
+          <div class="dp-pair__item">
+            <span class="dp-pair__label">이전</span>
+            <h3 class="dp-pair__title">전화 · 메신저 · 수기 장부</h3>
+            <p class="dp-pair__line">의뢰는 전화로, 파일은 메신저로, 도착일은 달력에 따로 적고, 진행 상황은 다시 전화로 확인합니다.</p>
+          </div>
+          <div class="dp-pair__item dp-pair__item--on">
+            <span class="dp-pair__label">abuts.fit</span>
+            <h3 class="dp-pair__title">의뢰 한 건에 모두</h3>
+            <p class="dp-pair__line">파일 · 요청 사항 · 도착일 · 메시지 · 기공비가 의뢰 한 건에 함께 남고, 목록과 캘린더로 한 번에 봅니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ③ 의뢰 접수 -->
+  <section class="dp" id="request">
+    <div class="container">
+      <div class="dp__inner dp__inner--wide">
+        <span class="dp-kicker">01 · 의뢰 접수</span>
+        <h2 class="dp-title">기공 의뢰는<br>한 화면에서 접수합니다.</h2>
+        <p class="dp-line">기공소와 환자, 도착 희망일, 보철과 파일까지 한 번에 적어 보냅니다.</p>
+        <div class="pfeat">
+          <figure class="pshot">
+            <div class="pshot__bar"><span class="pshot__dots"><i></i><i></i><i></i></span>abuts.fit · 신규 의뢰</div>
+            <img src="assets/img/platform/request.jpg" alt="abuts.fit 신규 의뢰 화면: 기공소·환자명·도착일 입력, 파일 첨부, 치아 번호별 보철 선택." width="1024" height="552" loading="lazy">
+          </figure>
+          <ol class="pfeat__list">
+            <li><b>기공소 · 환자 · 도착일</b><span>거래 기공소를 고르고, 치과 도착 희망일을 달력에서 선택합니다.</span></li>
+            <li><b>치아 번호로 보철 선택</b><span>치식에서 치아를 눌러 크라운 · 어벗 · 스캔바디를 지정합니다.</span></li>
+            <li><b>파일은 끌어다 놓기</b><span>STL · PLY · OBJ · DCM · 이미지. 모바일로 환자 사진도 첨부합니다.</span></li>
+            <li><b>임시저장 · 리메이크</b><span>작성 중인 의뢰는 임시저장, 재제작은 리메이크로 바로 접수합니다.</span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ④ 의뢰 목록 · 일정 관리 -->
+  <section class="dp dp--soft" id="schedule">
+    <div class="container">
+      <div class="dp__inner dp__inner--wide">
+        <span class="dp-kicker">02 · 의뢰 목록 · 일정 관리</span>
+        <h2 class="dp-title">오늘 도착할 보철,<br>캘린더로 한눈에.</h2>
+        <p class="dp-line">주문일과 도착일을 기준으로 의뢰를 날짜별로 모아 보고, 상태별 개수로 진행 상황을 확인합니다.</p>
+        <div class="pfeat pfeat--rev">
+          <figure class="pshot">
+            <div class="pshot__bar"><span class="pshot__dots"><i></i><i></i><i></i></span>abuts.fit · 의뢰 목록</div>
+            <img src="assets/img/platform/board.jpg" alt="abuts.fit 의뢰 목록 화면: 월 달력, 날짜별 의뢰 목록, 상태별 개수와 의뢰 상세." width="860" height="562" loading="lazy">
+          </figure>
+          <ol class="pfeat__list">
+            <li><b>주문일 · 도착일 캘린더</b><span>달력에서 날짜를 누르면 그날의 의뢰만 모아 봅니다. 캘린더 · 목록 보기를 바꿀 수 있습니다.</span></li>
+            <li><b>상태별 개수</b><span>의뢰 · 작업 시작 · 완료 · 취소를 숫자로 보여 줘 오늘 챙길 일이 분명합니다.</span></li>
+            <li><b>빠른 검색</b><span>환자명 · 기공소명 · 치아 번호로 지난 의뢰까지 바로 찾습니다.</span></li>
+            <li><b>기공소별 보기 · 북마크</b><span>거래처별로 모아 보고, 다시 볼 의뢰는 북마크해 둡니다.</span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑤ 의뢰 상세 · 소통 -->
+  <section class="dp" id="talk">
+    <div class="container">
+      <div class="dp__inner dp__inner--wide">
+        <span class="dp-kicker">03 · 의뢰 상세 · 소통</span>
+        <h2 class="dp-title">변경과 문의는<br>의뢰 안에서 끝냅니다.</h2>
+        <p class="dp-line">전화 대신 의뢰 상세 화면에서 도착일을 확인하고, 기공소와 메시지를 주고받습니다.</p>
+        <div class="pfeat">
+          <figure class="pshot pshot--detail">
+            <div class="pshot__bar"><span class="pshot__dots"><i></i><i></i><i></i></span>abuts.fit · 의뢰 상세</div>
+            <img src="assets/img/platform/board-detail.jpg" alt="abuts.fit 의뢰 상세: 주문일·도착일, 제작 변경·취소, 기공소 메시지, 확정 보철과 기공비." width="390" height="474" loading="lazy">
+          </figure>
+          <ol class="pfeat__list">
+            <li><b>주문일 · 도착일</b><span>의뢰마다 주문일과 도착일이 표시되고, 다음 도착일로 바로 넘어갑니다.</span></li>
+            <li><b>제작 변경 · 취소</b><span>조건이 바뀌면 의뢰 안에서 제작 변경이나 취소를 요청합니다.</span></li>
+            <li><b>기공소 메시지</b><span>사진 · 파일을 붙여 기공소와 대화하고, 기록은 의뢰에 남습니다.</span></li>
+            <li><b>확정 보철 · 기공비</b><span>치아별 확정 보철과 최종 기공비를 한 화면에서 확인합니다.</span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑥ 정산 · 통계 -->
+  <section class="dp dp--soft" id="billing">
+    <div class="container">
+      <div class="dp__inner dp__inner--wide">
+        <span class="dp-kicker">04 · 정산 · 통계</span>
+        <h2 class="dp-title">기공비 내역은 쌓이고,<br>월말엔 확인만.</h2>
+        <p class="dp-line">크레딧으로 결제하고, 사용한 금액만 월말 계산서로 받습니다. 거래 내역과 통계는 기간별로 바로 봅니다.</p>
+        <div class="pgrid">
+          <figure class="pshot">
+            <div class="pshot__bar"><span class="pshot__dots"><i></i><i></i><i></i></span>정산 · 내역</div>
+            <img src="assets/img/platform/ledger.jpg" alt="abuts.fit 정산 내역: 현재 잔액 = 충전 − 소비, 기간별 거래 내역 표." width="860" height="562" loading="lazy">
+            <figcaption>잔액 = 충전 − 소비 · 기간별 거래 내역</figcaption>
+          </figure>
+          <figure class="pshot">
+            <div class="pshot__bar"><span class="pshot__dots"><i></i><i></i><i></i></span>정산 · 통계</div>
+            <img src="assets/img/platform/stats.jpg" alt="abuts.fit 통계: 기간별 추이, 유형별 금액, 기공소별 소비, 보철 유형별." width="860" height="562" loading="lazy">
+            <figcaption>기간별 추이 · 기공소별 · 보철 유형별 통계</figcaption>
+          </figure>
+        </div>
+        <div class="dp-words">
+          <span class="dp-word">크레딧 결제</span>
+          <span class="dp-word">사용분만 월말 계산서</span>
+          <span class="dp-word">미사용 잔액 환불</span>
+        </div>
+        <div class="dp-cta"><a class="btn btn--ghost" href="pricing.html">이용 방법 · 비용 보기</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑦ 심플웨이 재료 주문 (간단히) -->
+  <section class="dp dp--tight" id="supply">
+    <div class="container">
+      <div class="psupply">
+        <figure class="imgfig aspect-4-3">
+          <img src="assets/img/platform/simpleway-sequence.jpg" alt="심플웨이 수술 순서를 보여 주는 이미지." width="1024" height="769" loading="lazy">
+        </figure>
+        <div class="psupply__text">
+          <span class="dp-kicker">재료 주문</span>
+          <h2 class="dp-title">심플웨이 재료도<br>함께 주문합니다.</h2>
+          <p class="dp-line">심플웨이 픽스처 · 힐링 · 어벗 · 키트는 abuts.fit에서 기공 의뢰와 함께 주문할 수 있습니다.</p>
+          <a class="link-arrow" href="https://abuts.fit/offer/simple-way" target="_blank" rel="noopener">심플웨이 보기</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑧ FAQ -->
+  <section class="dp dp--soft">
+    <div class="container">
+      <div class="dp__inner">
+        <span class="dp-kicker">FAQ</span>
+        <h2 class="dp-title">치과가 먼저<br>묻는 것들.</h2>
+        <div class="faq dp-visual dp-visual--narrow">
+          <details><summary>거래하던 기공소와 계속 일할 수 있나요?</summary><div class="faq__a"><p>거래하던 기공소가 기공소 회원으로 가입하면 그 기공소를 지정해 의뢰할 수 있습니다.</p></div></details>
+          <details><summary>어떤 파일을 올릴 수 있나요?</summary><div class="faq__a"><p>STL · PLY · OBJ · DCM 파일과 이미지를 올릴 수 있고, 모바일로 환자 사진을 찍어 첨부할 수 있습니다.</p></div></details>
+          <details><summary>기공비는 어떻게 결제하나요?</summary><div class="faq__a"><p>크레딧을 충전해 두고 의뢰마다 차감합니다. 계산서는 사용한 금액만 매월 말 기준으로 합산해 발행합니다.</p><a class="link-arrow" href="pricing.html">이용 방법 · 비용 보기</a></div></details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑨ 시작 -->
+  <section class="dp dp--navy">
+    <div class="container">
+      <div class="dp__inner">
+        <h2 class="dp-title">다음 기공 의뢰는<br>abuts.fit에서.</h2>
+        <p class="dp-line">가입과 플랫폼 이용은 무료입니다.</p>
+        <div class="dp-cta">
+          <a class="btn btn--on-navy btn--lg" href="https://abuts.fit/" target="_blank" rel="noopener">abuts.fit 시작하기</a>
+          <a class="btn btn--primary btn--lg" href="contact.html">도입 문의</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== 공통 푸터 (모든 페이지 동일) ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+<a class="brand" href="index.html" aria-label="abuts.fit 홈">
+          <img class="brand__logo" src="assets/img/abuts-mark.svg" alt="" width="40" height="40">
+          <span class="brand__word">abuts.fit</span>
+        </a>
+        <p>치과의 더 나은 진료를 위한 파트너. 의뢰 내용과 파일을 보내고, 제작 진행부터 배송·정산까지 이어서 확인하세요.</p>
+        <ul class="footer-contact">
+          <li><a href="mailto:contact@abuts.fit">contact@abuts.fit</a></li>
+          <li><a href="tel:1588-3948">1588-3948</a></li>
+          <li>경상남도 거제시 거제중앙로29길 6, 3층(고현동)</li>
+        </ul>
+        <p class="small">치과의사·개발자 이준호 원장이 만들었습니다.</p>
+      </div>
+      <div class="footer-col">
+        <h3>어벗츠</h3>
+        <ul>
+          <li><a href="index.html">어벗츠 소개</a></li>
+          <li><a href="start.html">시작하기</a></li>
+          <li><a href="guide.html">활용 가이드 · 소식</a></li>
+          <li><a href="blog.html">블로그</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>서비스 · 심플웨이</h3>
+        <ul>
+          <li><a href="dental.html">치과 이용 안내</a></li>
+          <li><a href="pricing.html">이용 방법 · 비용</a></li>
+          <li><a href="simpleway.html">심플웨이 소개</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>회사 · 문의</h3>
+        <ul>
+          <li><a href="company.html">회사소개</a></li>
+          <li><a href="contact.html">문의</a></li>
+          <li><a href="pricing.html">자주 묻는 질문</a></li>
+          <li><a href="https://abuts.fit/help" rel="noopener">서비스 고객센터</a></li>
+          <li><a href="https://abuts.fit/manual" rel="noopener">사용 매뉴얼</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>약관 · 정책</h3>
+        <ul>
+          <li><a href="https://abuts.fit/terms" rel="noopener">이용약관</a></li>
+          <li><a href="https://abuts.fit/privacy" rel="noopener">개인정보처리방침</a></li>
+          <li><a href="https://abuts.fit/service" rel="noopener">서비스 · 상품 안내</a></li>
+          <li><a href="https://abuts.fit/business" rel="noopener">사업자 정보</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <div>어벗츠 주식회사 | 대표자: 배태완 | 사업자등록번호: 358-87-03514 | 법인등록번호: 194911-0007687 | 통신판매업신고번호: 해당 없음</div>
+      <div>주소: 경상남도 거제시 거제중앙로29길 6, 3층(고현동) | 유선번호: 1588-3948 | 고객지원: support@abuts.fit | 사업 문의: business@abuts.fit</div>
+      <div>의료기기 정보는 허가·인증 자료를 기준으로 하며, 사용 전 첨부문서를 확인하십시오.</div>
+      <div>© 2026 어벗츠 주식회사. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+</body>
+</html>

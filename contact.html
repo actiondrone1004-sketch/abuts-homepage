@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="assets/img/abuts-mark.svg" type="image/svg+xml">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>문의 | 어벗츠</title>
+  <meta name="description" content="치과 도입, 기공소 파트너, 생산 의뢰, 제품 구매, 제휴 문의를 목적별로 남기는 페이지입니다. 대표전화 1588-3948, contact@abuts.fit, 운영시간 평일 09–18시 · 토요일 09–13시.">
+  <meta property="og:title" content="문의 | 어벗츠">
+  <meta property="og:description" content="치과 도입, 기공소 파트너, 생산 의뢰, 제품 구매, 제휴 문의를 목적별로 남기는 페이지입니다. 대표전화 1588-3948, contact@abuts.fit, 운영시간 평일 09–18시 · 토요일 09–13시.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<!-- ===== 공통 헤더 (모든 페이지 동일. 현재 페이지 메뉴 <a>에만 aria-current="page") ===== -->
+<a class="skip-link" href="#main">본문으로 건너뛰기</a>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html" aria-label="abuts.fit 홈">
+      <img class="brand__logo" src="assets/img/abuts-mark.svg" alt="" width="40" height="40">
+      <span class="brand__word">abuts.fit</span>
+    </a>
+    <nav aria-label="주요 메뉴">
+      <ul class="nav-menu">
+        <li class="has-sub">
+          <a href="index.html" aria-haspopup="true">어벗츠 소개</a>
+          <div class="sub">
+            <ul>
+              <li><a href="dental.html">치과 이용 안내</a></li>
+              <li><a href="pricing.html">이용 방법 · 비용</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="has-sub">
+          <a href="simpleway.html" aria-haspopup="true">심플웨이 소개</a>
+          <div class="sub">
+            <ul>
+              <li><a href="simpleway.html">심플웨이 소개</a></li>
+              <li><a href="simpleway-surgical.html">수술 · Surgical Kit</a></li>
+              <li><a href="simpleway-abutment.html">힐링 · 어벗먼트</a></li>
+              <li><a href="simpleway-prosthetic.html">보철 · Prosthetic Kit</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="company.html">회사소개</a></li>
+        <li><a href="blog.html">블로그</a></li>
+        <li><a href="contact.html" aria-current="page">문의</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn--ghost btn--sm" href="https://abuts.fit/login" rel="noopener">로그인</a>
+      <a class="btn btn--primary btn--sm" href="start.html">시작하기</a>
+    </div>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-mobile" aria-label="메뉴 열기">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+  <div class="nav-mobile" id="nav-mobile">
+    <div class="container">
+      <ul>
+        <li class="nav-mobile__group"><span>어벗츠 소개</span>
+          <ul>
+            <li><a href="index.html">어벗츠 소개</a></li>
+            <li><a href="dental.html">치과 이용 안내</a></li>
+            <li><a href="pricing.html">이용 방법 · 비용</a></li>
+          </ul>
+        </li>
+        <li class="nav-mobile__group"><span>심플웨이 소개</span>
+          <ul>
+            <li><a href="simpleway.html">심플웨이 소개</a></li>
+            <li><a href="simpleway-surgical.html">수술 · Surgical Kit</a></li>
+            <li><a href="simpleway-abutment.html">힐링 · 어벗먼트</a></li>
+            <li><a href="simpleway-prosthetic.html">보철 · Prosthetic Kit</a></li>
+          </ul>
+        </li>
+        <li><a href="company.html">회사소개</a></li>
+        <li><a href="blog.html">블로그</a></li>
+        <li><a href="contact.html" aria-current="page">문의</a></li>
+      </ul>
+      <div class="nav-mobile__cta">
+        <a class="btn btn--ghost" href="https://abuts.fit/login" rel="noopener">로그인</a>
+        <a class="btn btn--primary" href="start.html">시작하기</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ① 히어로 (감성) — 제목 + 문의 목적 단어 + 처리 흐름 -->
+  <section class="dp">
+    <div class="container">
+      <div class="dp__inner reveal">
+        <span class="dp-kicker">문의</span>
+        <h1 class="dp-title">문의는 간단하게,<br>회신은 운영시간 안에.</h1>
+        <div class="dp-words" role="group" aria-label="문의 목적">
+          <span class="dp-word">치과 도입</span>
+          <span class="dp-word">기공소 파트너</span>
+          <span class="dp-word">생산 의뢰</span>
+          <span class="dp-word">제품 구매</span>
+          <span class="dp-word">제휴 · 기타</span>
+        </div>
+        <div class="flow" role="group" aria-label="문의 처리 흐름">
+          <div class="flow__step"><span class="flow__num">01</span><span class="flow__name">남기기</span><span class="flow__sub">목적 · 연락처 · 내용</span></div>
+          <span class="flow__arrow" aria-hidden="true">→</span>
+          <div class="flow__step"><span class="flow__num">02</span><span class="flow__name">확인</span><span class="flow__sub">운영시간 안</span></div>
+          <span class="flow__arrow" aria-hidden="true">→</span>
+          <div class="flow__step"><span class="flow__num">03</span><span class="flow__name">회신</span><span class="flow__sub">남긴 연락처로</span></div>
+        </div>
+        <div class="dp-cta">
+          <a class="btn btn--primary btn--lg" href="#form">문의 남기기</a>
+          <a class="btn btn--ghost btn--lg" href="tel:1588-3948">전화 1588-3948</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ② 문의 남기기 (논리) — 폼 -->
+  <section class="dp dp--soft" id="form">
+    <div class="container">
+      <div class="dp__inner dp__inner--left">
+        <span class="dp-kicker">문의 남기기</span>
+        <h2 class="dp-title" id="form-title">목적을 고르고,<br>연락처를 남기세요.</h2>
+        <div class="dp-visual">
+          <form class="form" action="#" method="post" aria-labelledby="form-title">
+            <input type="hidden" name="ref" value="">
+            <div class="field">
+              <p class="strong small" id="purpose-label">문의 목적</p>
+              <div class="segmented" role="radiogroup" aria-labelledby="purpose-label">
+                <input type="radio" name="purpose" id="purpose-dental" value="dental" checked>
+                <label for="purpose-dental">치과 도입</label>
+                <input type="radio" name="purpose" id="purpose-lab" value="lab">
+                <label for="purpose-lab">기공소 파트너</label>
+                <input type="radio" name="purpose" id="purpose-production" value="production">
+                <label for="purpose-production">생산 의뢰</label>
+                <input type="radio" name="purpose" id="purpose-product" value="product">
+                <label for="purpose-product">제품 구매</label>
+                <input type="radio" name="purpose" id="purpose-partnership" value="partnership">
+                <label for="purpose-partnership">제휴 · 기타</label>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="field">
+                <label for="org">기관 · 회사명</label>
+                <input type="text" id="org" name="org" placeholder="치과명, 기공소명 또는 회사명" autocomplete="organization" required>
+              </div>
+              <div class="field">
+                <label for="person">담당자명</label>
+                <input type="text" id="person" name="person" placeholder="성함" autocomplete="name" required>
+              </div>
+            </div>
+            <div class="field">
+              <label for="reply">회신 연락처</label>
+              <input type="text" id="reply" name="reply" placeholder="전화번호 또는 이메일 주소" required>
+            </div>
+            <div class="field">
+              <label for="message">문의 내용</label>
+              <textarea id="message" name="message" placeholder="궁금한 점이나 상담받고 싶은 내용을 적어 주세요." required></textarea>
+            </div>
+            <label class="check">
+              <input type="checkbox" name="privacy" required>
+              <span>문의 응대를 위해 기관·회사명, 담당자명, 회신 연락처, 문의 내용을 수집·이용하는 데 동의합니다. <a href="https://abuts.fit/privacy" rel="noopener">개인정보처리방침</a></span>
+            </label>
+            <div class="row">
+              <button class="btn btn--primary btn--lg" type="submit">문의 보내기</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ③ 연락처 (논리) — 운영시간 단어 + 연락처 표 -->
+  <section class="dp" id="contacts">
+    <div class="container">
+      <div class="dp__inner">
+        <span class="dp-kicker">연락처</span>
+        <h2 class="dp-title">전화와 메일로도<br>받습니다.</h2>
+        <div class="dp-words" role="group" aria-label="운영시간">
+          <span class="dp-word">평일 09–18</span>
+          <span class="dp-word">토 09–13</span>
+          <span class="dp-word">일 · 공휴일 휴무</span>
+        </div>
+        <div class="dp-visual dp-visual--narrow">
+          <div class="table-wrap">
+            <table class="spec" aria-label="연락처">
+              <tbody>
+                <tr><th scope="row">대표전화</th><td><a class="strong" href="tel:1588-3948">1588-3948</a></td></tr>
+                <tr><th scope="row">이메일</th><td><a href="mailto:contact@abuts.fit">contact@abuts.fit</a></td></tr>
+                <tr><th scope="row">사업 제휴</th><td><a href="mailto:business@abuts.fit">business@abuts.fit</a></td></tr>
+                <tr><th scope="row">고객지원</th><td><a href="mailto:support@abuts.fit">support@abuts.fit</a></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ④ 오시는 길 (감성) — 주소 한 줄 + 지도 이미지 박스 -->
+  <section class="dp dp--soft">
+    <div class="container">
+      <div class="dp__inner">
+        <span class="dp-kicker">오시는 길</span>
+        <h2 class="dp-title">어벗츠는<br>경남 거제에 있습니다.</h2>
+        <p class="dp-line">경상남도 거제시 거제중앙로29길 6, 3층(고현동)</p>
+        <div class="imgbox aspect-2-1" role="img" aria-label="어벗츠 소재지 지도">
+          <div class="imgbox__cap"><b>어벗츠 주식회사</b><span>거제시 고현동 · 3층</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑤ 마무리 (네이비 CTA) -->
+  <section class="dp dp--navy">
+    <div class="container">
+      <div class="dp__inner">
+        <h2 class="dp-title">처음이면 시작하기,<br>이용 중이면 고객센터.</h2>
+        <p class="dp-line">크레딧 · 계산서 · 환불 문의는 서비스 고객센터로 보내 주세요.</p>
+        <div class="dp-cta">
+          <a class="btn btn--primary btn--lg" href="start.html">시작하기</a>
+          <a class="btn btn--on-navy btn--lg" href="https://abuts.fit/help" rel="noopener">서비스 고객센터</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== 공통 푸터 (모든 페이지 동일) ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+<a class="brand" href="index.html" aria-label="abuts.fit 홈">
+          <img class="brand__logo" src="assets/img/abuts-mark.svg" alt="" width="40" height="40">
+          <span class="brand__word">abuts.fit</span>
+        </a>
+        <p>치과의 더 나은 진료를 위한 파트너. 의뢰 내용과 파일을 보내고, 제작 진행부터 배송·정산까지 이어서 확인하세요.</p>
+        <ul class="footer-contact">
+          <li><a href="mailto:contact@abuts.fit">contact@abuts.fit</a></li>
+          <li><a href="tel:1588-3948">1588-3948</a></li>
+          <li>경상남도 거제시 거제중앙로29길 6, 3층(고현동)</li>
+        </ul>
+        <p class="small">치과의사·개발자 이준호 원장이 만들었습니다.</p>
+      </div>
+      <div class="footer-col">
+        <h3>어벗츠</h3>
+        <ul>
+          <li><a href="index.html">어벗츠 소개</a></li>
+          <li><a href="start.html">시작하기</a></li>
+          <li><a href="guide.html">활용 가이드 · 소식</a></li>
+          <li><a href="blog.html">블로그</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>서비스 · 심플웨이</h3>
+        <ul>
+          <li><a href="dental.html">치과 이용 안내</a></li>
+          <li><a href="pricing.html">이용 방법 · 비용</a></li>
+          <li><a href="simpleway.html">심플웨이 소개</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>회사 · 문의</h3>
+        <ul>
+          <li><a href="company.html">회사소개</a></li>
+          <li><a href="contact.html">문의</a></li>
+          <li><a href="pricing.html">자주 묻는 질문</a></li>
+          <li><a href="https://abuts.fit/help" rel="noopener">서비스 고객센터</a></li>
+          <li><a href="https://abuts.fit/manual" rel="noopener">사용 매뉴얼</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>약관 · 정책</h3>
+        <ul>
+          <li><a href="https://abuts.fit/terms" rel="noopener">이용약관</a></li>
+          <li><a href="https://abuts.fit/privacy" rel="noopener">개인정보처리방침</a></li>
+          <li><a href="https://abuts.fit/service" rel="noopener">서비스 · 상품 안내</a></li>
+          <li><a href="https://abuts.fit/business" rel="noopener">사업자 정보</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <div>어벗츠 주식회사 | 대표자: 배태완 | 사업자등록번호: 358-87-03514 | 법인등록번호: 194911-0007687 | 통신판매업신고번호: 해당 없음</div>
+      <div>주소: 경상남도 거제시 거제중앙로29길 6, 3층(고현동) | 유선번호: 1588-3948 | 고객지원: support@abuts.fit | 사업 문의: business@abuts.fit</div>
+      <div>의료기기 정보는 허가·인증 자료를 기준으로 하며, 사용 전 첨부문서를 확인하십시오.</div>
+      <div>© 2026 어벗츠 주식회사. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+</body>
+</html>

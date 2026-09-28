@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="assets/img/abuts-mark.svg" type="image/svg+xml">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>어벗츠 | 치과와 기공소의 제작 의뢰 플랫폼</title>
+  <meta name="description" content="치과의사이자 개발자인 이준호 원장의 진료실에서 시작한 어벗츠. 시술의 불편은 제품으로, 장부와 정산의 번거로움은 플랫폼으로 바꿔 온 이야기를 읽습니다.">
+  <meta property="og:title" content="어벗츠 | 치과와 기공소의 제작 의뢰 플랫폼">
+  <meta property="og:description" content="치과의사이자 개발자인 이준호 원장의 진료실에서 시작한 어벗츠. 시술의 불편은 제품으로, 장부와 정산의 번거로움은 플랫폼으로 바꿔 온 이야기를 읽습니다.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/hero.css">
+</head>
+<body>
+<!-- ===== 공통 헤더 (모든 페이지 동일. 현재 페이지 메뉴 <a>에만 aria-current="page") ===== -->
+<a class="skip-link" href="#main">본문으로 건너뛰기</a>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html" aria-label="abuts.fit 홈">
+      <img class="brand__logo" src="assets/img/abuts-mark.svg" alt="" width="40" height="40">
+      <span class="brand__word">abuts.fit</span>
+    </a>
+    <nav aria-label="주요 메뉴">
+      <ul class="nav-menu">
+        <li class="has-sub">
+          <a href="index.html" aria-haspopup="true" aria-current="page">어벗츠 소개</a>
+          <div class="sub">
+            <ul>
+              <li><a href="dental.html">치과 이용 안내</a></li>
+              <li><a href="pricing.html">이용 방법 · 비용</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="has-sub">
+          <a href="simpleway.html" aria-haspopup="true">심플웨이 소개</a>
+          <div class="sub">
+            <ul>
+              <li><a href="simpleway.html">심플웨이 소개</a></li>
+              <li><a href="simpleway-surgical.html">수술 · Surgical Kit</a></li>
+              <li><a href="simpleway-abutment.html">힐링 · 어벗먼트</a></li>
+              <li><a href="simpleway-prosthetic.html">보철 · Prosthetic Kit</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="company.html">회사소개</a></li>
+        <li><a href="blog.html">블로그</a></li>
+        <li><a href="contact.html">문의</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn--ghost btn--sm" href="https://abuts.fit/login" rel="noopener">로그인</a>
+      <a class="btn btn--primary btn--sm" href="start.html">시작하기</a>
+    </div>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-mobile" aria-label="메뉴 열기">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+  <div class="nav-mobile" id="nav-mobile">
+    <div class="container">
+      <ul>
+        <li class="nav-mobile__group"><span>어벗츠 소개</span>
+          <ul>
+            <li><a href="index.html" aria-current="page">어벗츠 소개</a></li>
+            <li><a href="dental.html">치과 이용 안내</a></li>
+            <li><a href="pricing.html">이용 방법 · 비용</a></li>
+          </ul>
+        </li>
+        <li class="nav-mobile__group"><span>심플웨이 소개</span>
+          <ul>
+            <li><a href="simpleway.html">심플웨이 소개</a></li>
+            <li><a href="simpleway-surgical.html">수술 · Surgical Kit</a></li>
+            <li><a href="simpleway-abutment.html">힐링 · 어벗먼트</a></li>
+            <li><a href="simpleway-prosthetic.html">보철 · Prosthetic Kit</a></li>
+          </ul>
+        </li>
+        <li><a href="company.html">회사소개</a></li>
+        <li><a href="blog.html">블로그</a></li>
+        <li><a href="contact.html">문의</a></li>
+      </ul>
+      <div class="nav-mobile__cta">
+        <a class="btn btn--ghost" href="https://abuts.fit/login" rel="noopener">로그인</a>
+        <a class="btn btn--primary" href="start.html">시작하기</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO:START -->
+  <!-- 첫 화면 슬라이더 — 관리자(/admin/ → 첫 화면)에서 편집. 이 구간은 저장할 때마다 새로 만들어진다. -->
+  <section class="ah" data-hero style="--dur:2.5s;--n:4" aria-roledescription="carousel" aria-label="어벗츠 소개: 치과, 기공소, 심플웨이 제작, 정산" tabindex="-1">
+    <div class="ah__stage">
+      <article class="ah-s is-active is-first" aria-roledescription="slide" aria-label="1 / 4 · 치과">
+        <div class="ah-s__inner">
+          <div class="ah-s__bg" aria-hidden="true"><span class="ah-floor"></span><span class="ah-streak"></span><span class="ah-streak"></span><span class="ah-streak"></span><span class="ah-streak"></span></div>
+          <div class="ah-words" aria-hidden="true"><span>ONE</span><span>PACKAGE</span></div>
+          <div class="ah-deck"><figure class="ah-card" style="--i:0;--x:-72%;--y:10%;--r:-11deg"><div class="ah-card__in"><img src="assets/img/simpleway/surgery-kit.jpg" alt="재료 · 키트 구매" decoding="async" class="ah-cover"><figcaption>재료 · 키트 구매</figcaption></div></figure><figure class="ah-card ah-card--ui" style="--i:2;--x:72%;--y:12%;--r:10deg"><div class="ah-card__in"><div class="ah-mini"><div class="ah-mini__bar"><i></i><i></i><i></i>abuts.fit</div><div class="ah-mini__t">#14 기공 의뢰<span class="ah-pill">기공소 전송</span></div><span><em>구강 스캔</em><b>STL</b></span><span><em>요청 사항</em><b>첨부</b></span><span><em>배송지</em><b>등록</b></span></div><figcaption>기공소 의뢰</figcaption></div></figure><figure class="ah-card ah-card--main" style="--i:1;--x:0%;--y:-6%;--r:0deg"><div class="ah-card__in"><img src="assets/img/simpleway/assembly-simple.jpg" alt="심플 어벗 · 보철" decoding="async"><figcaption>심플 어벗 · 보철</figcaption></div></figure></div>
+          <div class="ah-copy"><div class="container"><div class="ah-copy__in">
+            <h2 class="ah-title">기공 의뢰부터 재료 구매까지,<br>한 번에 패키지로.</h2>
+            <p class="ah-sub">기공소 의뢰와 심플웨이 재료 · 키트 구매를 abuts.fit 한 곳에서. 주문하고, 진행을 확인하고, 받는 것까지 이어집니다.</p>
+          </div></div></div>
+        </div>
+      </article>
+      <article class="ah-s ah-s--lab" aria-roledescription="slide" aria-label="2 / 4 · 기공소" aria-hidden="true">
+        <div class="ah-s__inner">
+          <div class="ah-s__bg" aria-hidden="true"><span class="ah-floor"></span><span class="ah-streak"></span><span class="ah-streak"></span><span class="ah-streak"></span><span class="ah-streak"></span></div>
+          <div class="ah-words" aria-hidden="true"><span>KEEP</span><span>YOUR LAB</span></div>
+          <div class="ah-deck"><figure class="ah-card" style="--i:0;--x:-72%;--y:10%;--r:-11deg"><div class="ah-card__in"><img src="assets/img/abutment.jpg" alt="커스텀 어벗먼트" decoding="async" class="ah-cover"><figcaption>커스텀 어벗먼트</figcaption></div></figure><figure class="ah-card ah-card--ui" style="--i:2;--x:72%;--y:12%;--r:10deg"><div class="ah-card__in"><div class="ah-mini"><div class="ah-mini__bar"><i></i><i></i><i></i>abuts.fit</div><div class="ah-mini__t">생산 의뢰<span class="ah-pill">CNC 제조</span></div><span><em>디자인</em><b>STL 업로드</b></span><span><em>제조</em><b>어벗츠</b></span><span><em>출고</em><b>송장 등록</b></span></div><figcaption>제조만 맡기기</figcaption></div></figure><figure class="ah-card ah-card--main" style="--i:1;--x:0%;--y:-6%;--r:0deg"><div class="ah-card__in"><img src="assets/img/simpleway/assembly-custom.jpg" alt="어벗츠 커스텀 어벗" decoding="async"><figcaption>어벗츠 커스텀 어벗</figcaption></div></figure></div>
+          <div class="ah-sparks" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="ah-copy"><div class="container"><div class="ah-copy__in">
+            <h2 class="ah-title">기존 기공소 그대로,<br>커스텀 어벗먼트 제조는 어벗츠에서.</h2>
+            <p class="ah-sub">거래하던 기공소와 지금처럼 일하세요. 디자인 STL만 올리면 커스텀 어벗먼트 제조는 어벗츠가 맡습니다.</p>
+          </div></div></div>
+        </div>
+      </article>
+      <article class="ah-s ah-s--cnc" aria-roledescription="slide" aria-label="3 / 4 · 심플웨이 제작" aria-hidden="true">
+        <div class="ah-s__inner">
+          <div class="ah-s__bg" aria-hidden="true"><span class="ah-photo" style="background-image:url('assets/img/cnc-room.jpg')"></span><span class="ah-floor"></span><span class="ah-streak"></span><span class="ah-streak"></span><span class="ah-streak"></span><span class="ah-streak"></span></div>
+          <div class="ah-words" aria-hidden="true"><span>CNC</span><span>MILLING</span></div>
+          <div class="ah-deck"><figure class="ah-card" style="--i:0;--x:-72%;--y:10%;--r:-11deg"><div class="ah-card__in"><img src="assets/img/machining.jpg" alt="CNC 밀링" decoding="async" class="ah-cover"><figcaption>CNC 밀링</figcaption></div></figure><figure class="ah-card" style="--i:2;--x:72%;--y:12%;--r:10deg"><div class="ah-card__in"><img src="assets/img/cnc-room-2.jpg" alt="가공 설비" decoding="async" class="ah-cover"><figcaption>가공 설비</figcaption></div></figure><figure class="ah-card ah-card--main" style="--i:1;--x:0%;--y:-6%;--r:0deg"><div class="ah-card__in"><img src="assets/img/simpleway/flow-chart.jpg" alt="심플웨이 제작" decoding="async"><figcaption>심플웨이 제작</figcaption></div></figure></div>
+          <div class="ah-sparks" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="ah-copy"><div class="container"><div class="ah-copy__in">
+            <h2 class="ah-title">CNC 밀링,<br>심플웨이가 제작합니다.</h2>
+            <p class="ah-sub">커스텀 어벗먼트는 CNC 밀링으로 가공하고, 치수 검사를 거쳐 출고합니다.</p>
+          </div></div></div>
+        </div>
+      </article>
+      <article class="ah-s ah-s--pay" data-light aria-roledescription="slide" aria-label="4 / 4 · 정산" aria-hidden="true">
+        <div class="ah-s__inner">
+          <div class="ah-s__bg" aria-hidden="true"><span class="ah-floor"></span><span class="ah-streak"></span><span class="ah-streak"></span><span class="ah-streak"></span><span class="ah-streak"></span></div>
+          <div class="ah-words" aria-hidden="true"><span>ALL IN</span><span>ONE</span></div>
+          <div class="ah-deck"><figure class="ah-card" style="--i:0;--x:-66%;--y:14%;--r:-9deg"><div class="ah-card__in"><img src="assets/img/ledger-to-digital.jpg" alt="장부 대신 화면" decoding="async" class="ah-cover"><figcaption>장부 대신 화면</figcaption></div></figure><figure class="ah-card ah-card--ui ah-card--main ah-card--wide" style="--i:1;--x:8%;--y:-4%;--r:0deg"><div class="ah-card__in"><div class="ah-mini ah-mini--pay"><div class="ah-mini__bar"><i></i><i></i><i></i>abuts.fit · 정산</div><div class="ah-mini__t">이번 달 사용 내역<span class="ah-pill">크레딧</span></div><span><em>기공 의뢰</em><b>크레딧 차감</b></span><span><em>재료 · 키트 구매</em><b>크레딧 차감</b></span><span><em>커스텀 어벗 제조</em><b>크레딧 차감</b></span><div class="ah-mini__sum">월말 계산서 · 사용분만 합산</div></div><figcaption>어벗츠 플랫폼 정산</figcaption></div></figure></div>
+          <div class="ah-copy"><div class="container"><div class="ah-copy__in">
+            <h2 class="ah-title">정산은 모두,<br>어벗츠 플랫폼에서 간편하게.</h2>
+            <p class="ah-sub">기공 의뢰 · 재료 구매 · 커스텀 어벗먼트 제조까지 크레딧 하나로 결제하고, 사용한 금액만 월말 계산서로 받습니다.</p>
+          </div></div></div>
+        </div>
+      </article>
+    </div>
+
+    <div class="ah__sweep" aria-hidden="true"></div>
+
+    <div class="ah__nav"><div class="container"><div class="ah__nav-in">
+      <div class="ah-ctrl">
+        <button type="button" data-prev aria-label="이전 장면"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button type="button" data-pause aria-label="자동 넘김 일시정지"><svg class="ah-i-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg><svg class="ah-i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+        <button type="button" data-next aria-label="다음 장면"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M9 5l7 7-7 7"/></svg></button>
+      </div>
+    </div></div></div>
+  </section>
+  <!-- HERO:END -->
+
+  <section class="dp" id="start">
+    <div class="container">
+      <div class="dp__inner reveal">
+        <span class="dp-kicker">ABOUT ABUTS</span>
+        <h1 class="dp-title dp-title--xl">진료실에서 느낀 불편을,<br>직접 바꾸기 시작했습니다.</h1>
+        <div class="stack stack--sm">
+          <p class="dp-line">임플란트 시술을 조금 더 편리하게.</p>
+          <p class="dp-line">장부와 정산 업무를 조금 더 간단하게.</p>
+          <p class="dp-line">어벗츠는 치과의사이자 개발자인 이준호 원장의 진료실에서 시작했습니다.</p>
+        </div>
+        <div class="dp-visual dp__inner--wide">
+          <div class="lineup">
+            <a class="lineup__item" href="simpleway-abutment.html#custom">
+              <figure class="imgfig aspect-1-1">
+                <img src="assets/img/abutment.jpg" alt="티타늄 커스텀 어벗먼트 가공품." width="1050" height="1400" loading="lazy">
+                <figcaption><b>커스텀 어벗먼트</b> 환자별 CNC 맞춤 제작</figcaption>
+              </figure>
+            </a>
+            <a class="lineup__item" href="simpleway-abutment.html">
+              <div class="imgbox aspect-1-1" role="img" aria-label="기성 어벗먼트와 힐링 어벗먼트 제품 사진 영역"><div class="imgbox__cap"><b>기성 어벗먼트 · 힐링</b><span>Hex / Non-Hex</span></div></div>
+            </a>
+            <a class="lineup__item" href="simpleway-surgical.html">
+              <div class="imgbox aspect-1-1" role="img" aria-label="Surgical Kit 제품 사진 영역"><div class="imgbox__cap"><b>Surgical Kit</b><span>시술 키트</span></div></div>
+            </a>
+            <a class="lineup__item" href="simpleway-surgical.html">
+              <div class="imgbox aspect-1-1" role="img" aria-label="Prosthetic Kit 제품 사진 영역"><div class="imgbox__cap"><b>Prosthetic Kit</b><span>보철 키트</span></div></div>
+            </a>
+            <a class="lineup__item lineup__item--app" href="dental.html">
+              <div class="shot" data-focus="list" role="img" aria-label="abuts.fit 의뢰 목록 화면 예시">
+                <div class="shot__bar"><span class="shot__dots"><i></i><i></i><i></i></span><span class="shot__title">abuts.fit</span><span class="shot__ex">예시 화면</span></div>
+                <div class="shot__body">
+                  <aside class="shot__side">
+                    <div class="req req--active"><div class="req__top"><span class="req__name">#26 커스텀 어벗먼트</span><span class="pill pill--work">가공 중</span></div></div>
+                    <div class="req"><div class="req__top"><span class="req__name">#36 힐링 어벗먼트</span><span class="pill pill--ship">출고</span></div></div>
+                    <div class="req"><div class="req__top"><span class="req__name">#14 기공 의뢰</span><span class="pill pill--prep">준비</span></div></div>
+                  </aside>
+                </div>
+              </div>
+              <span class="lineup__name">의뢰 · 제작 · 정산 플랫폼</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dp dp--soft" id="problems">
+    <div class="container">
+      <div class="dp__inner">
+        <span class="dp-kicker">개선하고 싶은 일</span>
+        <h2 class="dp-title">진료 중에도, 진료 후에도<br>바꾸고 싶은 두 가지.</h2>
+        <div class="dp-pair">
+          <article class="dp-pair__item">
+            <span class="dp-pair__label">시술의 불편</span>
+            <h3 class="dp-pair__title">매일의 임플란트 시술</h3>
+            <div class="dp-words"><span class="dp-word">제품</span><span class="dp-word">과정</span><span class="dp-word">더 편리하게</span></div>
+          </article>
+          <article class="dp-pair__item">
+            <span class="dp-pair__label">업무의 번거로움</span>
+            <h3 class="dp-pair__title">장부와 정산</h3>
+            <div class="dp-words"><span class="dp-word">수기 기록</span><span class="dp-word">대조</span><span class="dp-word">재확인</span><span class="dp-word">더 간단하게</span></div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dp" id="cases">
+    <div class="container">
+      <div class="dp__inner">
+        <span class="dp-kicker">개발 사례</span>
+        <h2 class="dp-title dp-title--xl">시술의 불편은 제품으로.<br>업무의 번거로움은 플랫폼으로.</h2>
+        <p class="dp-line dp-line--muted">“현장에서 필요한 일을 더 편리하고 간편하게 할 수 없을까?”</p>
+        <div class="dp-pair">
+          <article class="dp-pair__item">
+            <span class="dp-pair__label">제품 개발 사례</span>
+            <h3 class="dp-pair__title">구강스캐너에 맞춘 기성 어벗먼트</h3>
+            <div class="dp-visual mt-8">
+              <div class="imgbox aspect-16-9" role="img" aria-label="구강스캐너로 스캔한 기성 어벗먼트 화면 이미지 영역">
+                <div class="imgbox__cap"><b>구강스캔 → 디자인</b><span>기성 어벗먼트 · 스캔 화면</span></div>
+              </div>
+            </div>
+          </article>
+          <article class="dp-pair__item">
+            <span class="dp-pair__label">플랫폼 개발 사례</span>
+            <h3 class="dp-pair__title">수기 장부와 정산을 더 간편하게</h3>
+            <div class="dp-visual mt-8">
+              <figure class="imgfig aspect-16-9">
+                <img src="assets/img/ledger-to-digital.jpg" alt="왼쪽은 손으로 쓴 장부와 영수증, 계산기가 흩어진 책상. 오른쪽은 같은 책상 위 노트북에 정리된 의뢰·정산 화면." width="1600" height="900" loading="lazy">
+                <figcaption>수기 장부에서 플랫폼 화면으로</figcaption>
+              </figure>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dp dp--soft" id="tech">
+    <div class="container">
+      <div class="dp__inner">
+        <span class="dp-kicker">핵심 기술 · 구강스캐너 대응 어벗먼트</span>
+        <h2 class="dp-title dp-title--xl">스캔하면,<br>디자인으로 이어집니다.</h2>
+        <p class="dp-line">기성 어벗먼트를 구강스캐너에 맞춰 개발했습니다. 디지털 구강스캔만으로 디자인까지 이어집니다.</p>
+        <div class="flow" role="list">
+          <div class="flow__step" role="listitem"><span class="flow__num">01</span><span class="flow__name">구강스캔</span><span class="flow__sub">스프레이 없이</span></div>
+          <span class="flow__arrow" aria-hidden="true">→</span>
+          <div class="flow__step" role="listitem"><span class="flow__num">02</span><span class="flow__name">규격 인식</span><span class="flow__sub">D-cut 형상</span></div>
+          <span class="flow__arrow" aria-hidden="true">→</span>
+          <div class="flow__step" role="listitem"><span class="flow__num">03</span><span class="flow__name">디자인</span><span class="flow__sub">스캔 데이터 그대로</span></div>
+          <span class="flow__arrow" aria-hidden="true">→</span>
+          <div class="flow__step" role="listitem"><span class="flow__num">04</span><span class="flow__name">제작</span><span class="flow__sub">커스텀 · 기성</span></div>
+        </div>
+        <div class="dp-pair compare">
+          <div class="dp-pair__item compare__item compare__item--before">
+            <span class="dp-pair__label">일반 기성 어벗먼트</span>
+            <h3 class="dp-pair__title">스캔 후, 다시 확인</h3>
+            <div class="dp-words"><span class="dp-word">스프레이 스캔</span><span class="dp-word">규격 확인 어려움</span><span class="dp-word">디자인 보정</span><span class="dp-word">재스캔</span></div>
+          </div>
+          <div class="dp-pair__item compare__item compare__item--after">
+            <span class="dp-pair__label">어벗츠 기성 어벗먼트</span>
+            <h3 class="dp-pair__title">스캔 그대로, 디자인</h3>
+            <div class="dp-words"><span class="dp-word">스프레이 없이</span><span class="dp-word">D-cut 규격 인식</span><span class="dp-word">스캔 데이터 그대로</span><span class="dp-word">디자인으로 연결</span></div>
+          </div>
+        </div>
+        <div class="dp-cta"><a class="btn btn--primary" href="simpleway-abutment.html">기성 어벗먼트 · 힐링 보기</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dp" id="numbers">
+    <div class="container">
+      <div class="dp__inner dp__inner--wide">
+        <span class="dp-kicker">숫자로 보는 어벗츠</span>
+        <h2 class="dp-title">첫 특허부터,<br>플랫폼까지.</h2>
+        <div class="stat-grid">
+          <div class="stat"><span class="stat__value">2007</span><span class="stat__label">첫 특허 출원</span><span class="stat__note">이준호</span></div>
+          <div class="stat"><span class="stat__value">8+1<small>건</small></span><span class="stat__label">국내 특허 8건 · 미국 특허 1건</span><span class="stat__note">발명자 이준호</span></div>
+          <div class="stat"><span class="stat__value">2025</span><span class="stat__label">어벗츠 설립</span><span class="stat__note">어벗츠 주식회사</span></div>
+          <div class="stat"><span class="stat__value">829<small>건</small></span><span class="stat__label">누적 의뢰</span><span class="stat__note">abuts.fit · 2026년 9월 기준</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dp dp--soft" id="spread">
+    <div class="container">
+      <div class="dp__inner">
+        <span class="dp-kicker">동료 치과로</span>
+        <h2 class="dp-title">한 치과에서 시작한 경험이,<br>동료 치과로 이어졌습니다.</h2>
+        <div class="stack stack--sm">
+          <p class="dp-line">이준호 원장이 자신의 치과에서 사용하던 제품과 플랫폼은 주변 동료 치과들로도 이어졌습니다.</p>
+          <p class="dp-line">실제로 사용해 본 동료들의 긍정적인 반응은 더 많은 치과에 어벗츠를 소개하려는 계기가 되었습니다.</p>
+          <p class="dp-line">이제 더 다양한 현장의 이야기를 듣고, 함께 개선해 나가려 합니다.</p>
+        </div>
+        <div class="flow">
+          <div class="flow__step"><span class="flow__num">01</span><span class="flow__name">한 치과</span><span class="flow__sub">직접 사용</span></div>
+          <span class="flow__arrow" aria-hidden="true">→</span>
+          <div class="flow__step"><span class="flow__num">02</span><span class="flow__name">동료 치과</span><span class="flow__sub">실제 사용</span></div>
+          <span class="flow__arrow" aria-hidden="true">→</span>
+          <div class="flow__step"><span class="flow__num">03</span><span class="flow__name">더 많은 치과</span><span class="flow__sub">어벗츠 소개</span></div>
+          <span class="flow__arrow" aria-hidden="true">→</span>
+          <div class="flow__step"><span class="flow__num">04</span><span class="flow__name">더 다양한 현장</span><span class="flow__sub">함께 개선</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dp dp--navy" id="promise">
+    <div class="container">
+      <div class="dp__inner">
+        <span class="dp-kicker">약속</span>
+        <h2 class="dp-title">치과의사 이준호가 만들고,<br>진료 현장에서 함께 다듬는 어벗츠.</h2>
+        <div class="stack stack--sm">
+          <p class="dp-line">임플란트 시술의 작은 불편부터</p>
+          <p class="dp-line">장부와 정산을 챙기는 반복 업무까지.</p>
+          <p class="dp-line">실제 사용 경험을 바탕으로 더 편리한 방법을 찾아가겠습니다.</p>
+        </div>
+        <div class="dp-cta">
+          <a class="btn btn--on-navy btn--lg" href="dental.html">플랫폼 알아보기</a>
+          <a class="btn btn--primary btn--lg" href="simpleway.html">제품 알아보기</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== 공통 푸터 (모든 페이지 동일) ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+<a class="brand" href="index.html" aria-label="abuts.fit 홈">
+          <img class="brand__logo" src="assets/img/abuts-mark.svg" alt="" width="40" height="40">
+          <span class="brand__word">abuts.fit</span>
+        </a>
+        <p>치과의 더 나은 진료를 위한 파트너. 의뢰 내용과 파일을 보내고, 제작 진행부터 배송·정산까지 이어서 확인하세요.</p>
+        <ul class="footer-contact">
+          <li><a href="mailto:contact@abuts.fit">contact@abuts.fit</a></li>
+          <li><a href="tel:1588-3948">1588-3948</a></li>
+          <li>경상남도 거제시 거제중앙로29길 6, 3층(고현동)</li>
+        </ul>
+        <p class="small">치과의사·개발자 이준호 원장이 만들었습니다.</p>
+      </div>
+      <div class="footer-col">
+        <h3>어벗츠</h3>
+        <ul>
+          <li><a href="index.html">어벗츠 소개</a></li>
+          <li><a href="start.html">시작하기</a></li>
+          <li><a href="guide.html">활용 가이드 · 소식</a></li>
+          <li><a href="blog.html">블로그</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>서비스 · 심플웨이</h3>
+        <ul>
+          <li><a href="dental.html">치과 이용 안내</a></li>
+          <li><a href="pricing.html">이용 방법 · 비용</a></li>
+          <li><a href="simpleway.html">심플웨이 소개</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>회사 · 문의</h3>
+        <ul>
+          <li><a href="company.html">회사소개</a></li>
+          <li><a href="contact.html">문의</a></li>
+          <li><a href="pricing.html">자주 묻는 질문</a></li>
+          <li><a href="https://abuts.fit/help" rel="noopener">서비스 고객센터</a></li>
+          <li><a href="https://abuts.fit/manual" rel="noopener">사용 매뉴얼</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>약관 · 정책</h3>
+        <ul>
+          <li><a href="https://abuts.fit/terms" rel="noopener">이용약관</a></li>
+          <li><a href="https://abuts.fit/privacy" rel="noopener">개인정보처리방침</a></li>
+          <li><a href="https://abuts.fit/service" rel="noopener">서비스 · 상품 안내</a></li>
+          <li><a href="https://abuts.fit/business" rel="noopener">사업자 정보</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <div>어벗츠 주식회사 | 대표자: 배태완 | 사업자등록번호: 358-87-03514 | 법인등록번호: 194911-0007687 | 통신판매업신고번호: 해당 없음</div>
+      <div>주소: 경상남도 거제시 거제중앙로29길 6, 3층(고현동) | 유선번호: 1588-3948 | 고객지원: support@abuts.fit | 사업 문의: business@abuts.fit</div>
+      <div>의료기기 정보는 허가·인증 자료를 기준으로 하며, 사용 전 첨부문서를 확인하십시오.</div>
+      <div>© 2026 어벗츠 주식회사. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+<script src="assets/hero.js"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+/* ==========================================================================
+   홈 첫 화면 — "하나의 플랫폼, 네 개의 현장" 웹디자인 소개 (영상 아님)
+   치과 → 기공소 → 심플웨이 제조사 → 정산. 슬라이드마다 색 세계 + 거대 글자 + 촤르륵 펼쳐지는 이미지 카드.
+   클래스 접두어 ah-  ·  동작: assets/hero.js
+   ========================================================================== */
+.ah { --dur: 2s; position: relative; overflow: hidden; height: clamp(620px, calc(100svh - 64px), 920px); background: #0b0f1e; color: #fff; isolation: isolate; }
+.ah__stage { position: absolute; inset: 0; }
+
+/* ---------- 슬라이드 색 세계 ---------- */
+.ah-s { --bg1: #6b4dff; --bg2: #1a0f5c; --glow: #b69bff; --line: #9fd0ff; --word: #ffffff; --fg: #ffffff; --fg-2: rgba(255,255,255,.78); --btn: #ffffff; --btn-ink: #1a0f5c;
+  position: absolute; inset: 0; visibility: hidden; z-index: 0; color: var(--fg); }
+.ah-s--lab   { --bg1: #b8ec2c; --bg2: #3d5c00; --glow: #eaff7a; --line: #f6ffbf; --btn: #10200a; --btn-ink: #eaff7a; }
+.ah-s--cnc   { --bg1: #ff8d2e; --bg2: #8a2d00; --glow: #ffd08a; --line: #fff1c9; --btn: #ffffff; --btn-ink: #8a2d00; }
+.ah-s--pay   { --bg1: #f3f8ff; --bg2: #b7d3f3; --glow: #ffffff; --line: #6aa6ff; --word: #0f1f3d; --fg: #0f1f3d; --fg-2: #3b4d6b; --btn: #0f1f3d; --btn-ink: #ffffff; }
+.ah-s.is-active { visibility: visible; z-index: 2; }
+.ah-s.is-leaving { visibility: visible; z-index: 1; }
+
+/* 배경: 색 · 빛줄기 · 바닥 격자 */
+.ah-s__bg { position: absolute; inset: 0; background: radial-gradient(90% 70% at 50% 38%, var(--bg1) 0%, color-mix(in srgb, var(--bg1) 55%, var(--bg2)) 45%, var(--bg2) 100%); overflow: hidden; }
+.ah-s__bg::before { content: ""; position: absolute; inset: 0; background: radial-gradient(38% 30% at 50% 52%, color-mix(in srgb, var(--glow) 55%, transparent), transparent 70%); animation: ah-breathe 5s ease-in-out infinite; }
+.ah-photo { position: absolute; inset: 0; background-size: cover; background-position: center; mix-blend-mode: luminosity; opacity: .22; }
+.ah-streak { position: absolute; width: 46vw; height: 3px; border-radius: 3px; background: linear-gradient(90deg, transparent, var(--line), transparent); filter: drop-shadow(0 0 8px var(--line)); opacity: .0; transform: rotate(-24deg); animation: ah-streak 4.8s linear infinite; }
+.ah-streak:nth-child(2) { top: 18%; left: -10%; animation-delay: -.6s; }
+.ah-streak:nth-child(3) { top: 34%; left: 55%; animation-delay: -2.1s; width: 30vw; }
+.ah-streak:nth-child(4) { top: 62%; left: 8%; animation-delay: -3.3s; transform: rotate(-24deg) scaleX(.7); }
+.ah-streak:nth-child(5) { top: 12%; left: 70%; animation-delay: -1.4s; transform: rotate(24deg); }
+.ah-floor { position: absolute; left: -50%; right: -50%; bottom: -8%; height: 46%; transform-origin: 50% 100%; transform: perspective(520px) rotateX(62deg);
+  background-image: linear-gradient(color-mix(in srgb, var(--line) 45%, transparent) 1.5px, transparent 1.5px), linear-gradient(90deg, color-mix(in srgb, var(--line) 45%, transparent) 1.5px, transparent 1.5px);
+  background-size: 64px 64px; mask-image: linear-gradient(to top, #000 10%, transparent 90%); -webkit-mask-image: linear-gradient(to top, #000 10%, transparent 90%); animation: ah-floor 3.2s linear infinite; opacity: .55; }
+@keyframes ah-floor { to { background-position: 0 64px, 0 64px; } }
+@keyframes ah-streak { 0% { opacity: 0; translate: -30vw 0; } 15% { opacity: .9; } 60% { opacity: .6; } 100% { opacity: 0; translate: 60vw 0; } }
+@keyframes ah-breathe { 0%, 100% { opacity: .75; transform: scale(1); } 50% { opacity: 1; transform: scale(1.08); } }
+
+/* ---------- 거대 글자 (카드 뒤) ---------- */
+.ah-words { position: absolute; left: 0; right: 0; top: 33%; transform: translateY(-50%); display: grid; justify-items: start; padding-inline: max(24px, calc((100% - 1160px) / 2 + 24px)); line-height: .86; pointer-events: none; z-index: 1;
+  font-family: "Archivo Black", "Noto Sans KR", sans-serif; font-size: clamp(56px, 10vw, 150px); letter-spacing: -.02em; text-transform: uppercase; color: var(--word); white-space: nowrap; }
+.ah-words span { display: block; text-shadow: 0 10px 40px rgba(0,0,0,.18); }
+
+/* ---------- 이미지 카드 덱: 활성화되면 가운데서 촤르륵 펼쳐진다 ---------- */
+.ah-deck { position: absolute; left: 68%; top: 50%; width: clamp(190px, 17vw, 250px); aspect-ratio: 3 / 4; min-height: 0; transform: translate(-50%, -50%); z-index: 2; }
+.ah-card { position: absolute; inset: 0; margin: 0; z-index: calc(1 + var(--i));
+  transform: translate(calc(var(--x) * var(--spread, 1)), var(--y)) rotate(var(--r)); }
+.ah-card--main { z-index: 5; }
+.ah-card__in { height: 100%; display: grid; grid-template-rows: minmax(0, 1fr) auto; border-radius: 18px; overflow: hidden; background: #fff; box-shadow: 0 28px 60px rgba(0,0,0,.32), 0 0 0 1px rgba(255,255,255,.4);
+  animation: ah-card-bob 4.6s ease-in-out infinite; animation-delay: calc(var(--i) * -1.3s); }
+.ah-card img { width: 100%; height: 100%; min-height: 0; object-fit: contain; background: #fff; }
+.ah-card img.ah-cover { object-fit: cover; }
+.ah-card figcaption { padding: 8px 12px; font-size: .82rem; font-weight: 700; color: #16233a; background: #fff; border-top: 1px solid #eef1f6; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ah-card--wide { inset: 6% auto auto -34%; width: 168%; }
+.ah-card--wide .ah-card__in { height: auto; }
+@keyframes ah-card-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+/* 촤르륵: 한 장씩 빠르게 튀어나와 제자리로 */
+.ah-s.is-active .ah-card { animation: ah-deal .62s cubic-bezier(.2,1.25,.35,1) both; animation-delay: calc(.12s + var(--i) * .09s); }
+@keyframes ah-deal {
+  0% { opacity: 0; transform: translate(0, 40%) rotate(0deg) scale(.55); }
+  55% { opacity: 1; }
+  100% { opacity: 1; transform: translate(calc(var(--x) * var(--spread, 1)), var(--y)) rotate(var(--r)) scale(1); }
+}
+/* 카드 안 작은 화면 목업 */
+.ah-mini { height: 100%; display: grid; align-content: start; gap: 8px; padding: 0 12px 12px; background: linear-gradient(180deg, #f7f9fc, #fff); color: #16233a; font-size: .78rem; }
+.ah-mini__bar { display: flex; align-items: center; gap: 5px; margin: 0 -12px; padding: 8px 12px; background: #eef2f8; color: #6b7a8f; font-weight: 700; font-size: .72rem; }
+.ah-mini__bar i { width: 7px; height: 7px; border-radius: 50%; background: #cfd7e3; }
+.ah-mini__t { white-space: nowrap; display: flex; justify-content: space-between; align-items: center; gap: 6px; font-weight: 800; font-size: .9rem; margin: 4px 0 2px; }
+.ah-mini > span { display: flex; justify-content: space-between; gap: 8px; padding: 7px 9px; border-radius: 9px; background: #f1f4f9; }
+.ah-mini em { font-style: normal; color: #6b7a8f; } .ah-mini b { font-weight: 700; }
+.ah-mini__sum { margin-top: 2px; padding: 9px 10px; border-radius: 10px; background: #0f1f3d; color: #fff; font-weight: 700; text-align: center; }
+.ah-mini--pay { font-size: .84rem; }
+.ah-pill { font-size: .68rem; font-weight: 700; padding: 2px 8px; border-radius: 999px; background: #e8effd; color: #1f5fe0; white-space: nowrap; }
+
+/* 불꽃 (가공) */
+.ah-sparks { position: absolute; left: 68%; top: 58%; width: 0; height: 0; z-index: 3; }
+.ah-sparks i { position: absolute; width: 4px; height: 4px; border-radius: 50%; background: #fff6d0; box-shadow: 0 0 10px #ffd08a, 0 0 18px #ff8d2e; animation: ah-spark 1.6s ease-out infinite; }
+.ah-sparks i:nth-child(1) { --x: -120px; --y: -90px; } .ah-sparks i:nth-child(2) { --x: 140px; --y: -70px; animation-delay: .3s; }
+.ah-sparks i:nth-child(3) { --x: -80px; --y: 60px; animation-delay: .6s; } .ah-sparks i:nth-child(4) { --x: 110px; --y: 80px; animation-delay: .9s; }
+.ah-sparks i:nth-child(5) { --x: -160px; --y: 10px; animation-delay: 1.1s; } .ah-sparks i:nth-child(6) { --x: 170px; --y: -10px; animation-delay: .45s; }
+@keyframes ah-spark { 0% { transform: translate(0, 0) scale(1); opacity: 1; } 100% { transform: translate(var(--x), var(--y)) scale(.2); opacity: 0; } }
+
+/* ---------- 문구 · 버튼 ---------- */
+.ah-copy { position: absolute; left: 0; right: 0; bottom: 88px; z-index: 4; }
+.ah-copy__in { max-width: 470px; display: grid; gap: 12px; justify-items: start; }
+.ah-title { color: var(--fg); font-size: clamp(1.7rem, 3vw, 2.5rem); font-weight: 800; line-height: 1.22; letter-spacing: -.02em; text-shadow: 0 2px 20px rgba(0,0,0,.12); }
+.ah-sub { color: var(--fg-2); font-size: 1.02rem; }
+.ah-cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+.ah-btn { background: var(--btn); color: var(--btn-ink); }
+.ah-btn:hover { background: var(--btn); color: var(--btn-ink); filter: brightness(1.08); transform: translateY(-2px); }
+.ah-btn--line { background: transparent; color: var(--fg); border: 1.5px solid color-mix(in srgb, var(--fg) 55%, transparent); }
+.ah-btn--line:hover { background: color-mix(in srgb, var(--fg) 12%, transparent); color: var(--fg); }
+
+/* ---------- 들어오는 동작 ---------- */
+.ah-s.is-active { animation: ah-wipe 1.05s cubic-bezier(.7,0,.2,1) both; }
+.ah-s.is-first { animation: none; }
+@keyframes ah-wipe { from { clip-path: circle(0% at 68% 50%); } to { clip-path: circle(150% at 68% 50%); } }
+.ah-s.is-leaving .ah-s__inner { transform: scale(1.06); opacity: .6; transition: transform 1s, opacity 1s; }
+.ah-s.is-active .ah-words span { animation: ah-word .9s cubic-bezier(.2,.8,.2,1) both; }
+.ah-s.is-active .ah-words span + span { animation-delay: .12s; }
+.ah-s.is-active .ah-words span:first-child { animation-name: ah-word-l; }
+.ah-s.is-active .ah-words span + span { animation-name: ah-word-r; }
+.ah-s.is-active .ah-copy__in > * { animation: ah-up .7s cubic-bezier(.2,.8,.2,1) both; }
+.ah-s.is-active .ah-copy__in > :nth-child(2) { animation-delay: .5s; } .ah-s.is-active .ah-copy__in > :nth-child(3) { animation-delay: .6s; }
+.ah-s.is-active .ah-copy__in > :nth-child(1) { animation-delay: .4s; } .ah-s.is-active .ah-copy__in > :nth-child(4) { animation-delay: .7s; }
+@keyframes ah-word-l { from { opacity: 0; transform: translateX(-12%); filter: blur(10px); } to { opacity: 1; transform: none; filter: none; } }
+@keyframes ah-word-r { from { opacity: 0; transform: translateX(12%); filter: blur(10px); } to { opacity: 1; transform: none; filter: none; } }
+@keyframes ah-word { from { opacity: 0; transform: translateY(30%); } to { opacity: 1; transform: none; } }
+@keyframes ah-up { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+
+/* 천이 지나가는 듯한 빛 띠 (전환 때) */
+.ah__sweep { position: absolute; inset: -20% auto -20% -40%; width: 30%; z-index: 5; pointer-events: none; opacity: 0; background: linear-gradient(90deg, transparent, rgba(255,255,255,.55), rgba(255,255,255,.9), rgba(255,255,255,.55), transparent); filter: blur(18px); transform: skewX(-18deg); }
+.ah__sweep.is-go { animation: ah-sweep 1s cubic-bezier(.7,0,.2,1); }
+@keyframes ah-sweep { 0% { left: -40%; opacity: 0; } 20% { opacity: 1; } 100% { left: 120%; opacity: 0; } }
+
+/* ---------- 아래 탭 (진행 막대) · 화살표 ---------- */
+.ah__nav { position: absolute; left: 0; right: 0; bottom: 24px; z-index: 6; }
+.ah__nav-in { display: flex; gap: 14px; align-items: center; justify-content: flex-end; }
+.ah-ctrl { display: flex; gap: 6px; }
+.ah-ctrl button { width: 42px; height: 42px; border-radius: 50%; border: 1.5px solid rgba(255,255,255,.45); background: rgba(255,255,255,.08); color: #fff; cursor: pointer; display: grid; place-items: center; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); transition: background .2s; }
+.ah-ctrl button:hover { background: rgba(255,255,255,.22); }
+.ah-ctrl svg { width: 18px; height: 18px; }
+.ah--light .ah-ctrl button { border-color: rgba(15,31,61,.3); color: #0f1f3d; background: rgba(255,255,255,.5); }
+.ah-ctrl [data-pause] .ah-i-play { display: none; }
+.ah.is-paused .ah-ctrl [data-pause] .ah-i-play { display: block; }
+.ah.is-paused .ah-ctrl [data-pause] .ah-i-pause { display: none; }
+
+/* ---------- 반응형 ---------- */
+@media (max-width: 900px) {
+  .ah { height: clamp(640px, calc(100svh - 64px), 820px); }
+  .ah-words { top: 32%; font-size: clamp(54px, 17vw, 120px); }
+  .ah-words { justify-items: center; padding-inline: 0; top: 22%; }
+  .ah-deck { left: 50%; top: 37%; width: clamp(120px, 34vw, 160px); --spread: .78; }
+  .ah-mini > span:nth-of-type(n+3) { display: none; }
+  .ah-card figcaption { font-size: .7rem; padding: 6px 8px; }
+  .ah-mini { font-size: .66rem; gap: 5px; padding: 0 8px 8px; }
+  .ah-mini__t { font-size: .74rem; }
+  .ah-sparks { left: 50%; top: 42%; }
+  .ah-copy { bottom: 96px; }
+  .ah-copy__in { max-width: none; }
+  .ah-title { font-size: clamp(1.5rem, 6.4vw, 2rem); }
+  .ah-sub { font-size: .95rem; }
+  .ah-s.is-active { animation-name: ah-wipe-m; }
+  @keyframes ah-wipe-m { from { clip-path: circle(0% at 50% 32%); } to { clip-path: circle(150% at 50% 32%); } }
+}
+@media (max-width: 560px) {
+  .ah-ctrl [data-prev], .ah-ctrl [data-next] { display: none; }
+}
+
+/* 모션 줄이기: 자동 재생 없음, 반복 동작 정지 */
+@media (prefers-reduced-motion: reduce) {
+  .ah *, .ah *::before, .ah *::after, .ah-s { animation: none !important; }
+  .ah-streak, .ah-sparks { display: none; }
+}
+.ah-s__inner { position: absolute; inset: 0; transition: transform 1s, opacity 1s; }
+
