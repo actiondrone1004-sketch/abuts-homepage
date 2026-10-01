@@ -298,3 +298,6 @@
   .bl-hero__bg i, .bl-cover__art i, .bl-cover__ico, .bj__icon, .bj__pulse, .bl-cmp__vs span, .bl-yt__play, .bl-cta__glow, .bl-scrollcue span { animation: none !important; }
   .bj__pulse { display: none; }
 }
+
+/* 증서 이미지는 자르지 않고 전체를 보여 준다 */
+.bl-gallery .imgfig img[src*="img/certs/"] { object-fit: contain; aspect-ratio: 3 / 4; padding: 10px; background: #fff; }
