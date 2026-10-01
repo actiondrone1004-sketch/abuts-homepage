@@ -141,3 +141,13 @@ a.sw-step:hover .sw-step__img img { transform: scale(1.06); }
 @media (prefers-reduced-motion: reduce) {
   .sw-hero::before, .sw-stage img, .sw-dot, .sw-video__play { animation: none !important; }
 }
+
+/* ---------- 사진 모음 (번호 캡션) ---------- */
+.sw-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 16px; width: 100%; text-align: left; }
+.sw-gallery--2 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); }
+.sw-shot { margin: 0; border-radius: 18px; overflow: hidden; background: var(--paper); border: 1px solid var(--line); box-shadow: var(--shadow-sm); display: grid; grid-template-rows: auto 1fr; }
+.sw-shot img { width: 100%; height: auto; aspect-ratio: var(--ar, 16 / 9); object-fit: cover; display: block; background: #fff; }
+.sw-shot--contain img { object-fit: contain; padding: 10px; }
+.sw-shot figcaption { padding: 12px 14px 14px; font-size: .9rem; color: var(--muted); line-height: 1.5; }
+.sw-shot figcaption b { display: block; color: var(--ink); font-size: .98rem; margin-bottom: 2px; }
+.sw-shot figcaption .sw-shot__num { font-family: "IBM Plex Mono", monospace; font-size: .74rem; color: var(--blue); letter-spacing: .06em; margin-right: 6px; }
