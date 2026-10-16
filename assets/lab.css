@@ -1,0 +1,42 @@
+/* 어벗츠 기공소 v4 — style.css 위에 더하는 컴포넌트 (품목 카드 · 디자인 비교 · 무료 테스트 상자) */
+
+/* 품목 카드 */
+.lab-cards { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); width: 100%; text-align: left; }
+.lab-cards--3 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); }
+@media (min-width: 960px) { .lab-cards, .lab-cards--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.lab-card { display: grid; gap: 8px; align-content: start; padding: 22px; border: 1px solid var(--line); border-radius: var(--r); background: var(--paper); color: var(--body); min-width: 0; scroll-margin-top: 96px; }
+a.lab-card { transition: border-color .15s, transform .15s; }
+a.lab-card:hover { border-color: var(--blue); color: var(--body); transform: translateY(-2px); }
+.dp--soft .lab-card { border-color: transparent; }
+.dp--soft a.lab-card:hover { border-color: var(--blue); }
+.lab-card__label { font-size: .76rem; font-weight: 600; letter-spacing: .08em; color: var(--blue); }
+.lab-card__title { font-size: 1.15rem; color: var(--ink); margin: 0; }
+.lab-card__items { margin: 0; }
+.lab-card__need { margin: 4px 0 0; padding-top: 10px; border-top: 1px dashed var(--line-2); font-size: .88rem; color: var(--muted); }
+.lab-card__need b { color: var(--body); font-weight: 600; }
+.lab-card__more { font-size: .9rem; font-weight: 600; color: var(--blue); }
+.lab-card--feature { border: 1.5px solid var(--blue) !important; background: var(--blue-soft); }
+.lab-card .pshot { box-shadow: none; margin-bottom: 6px; }
+
+/* 이미지 셋 · 비교 */
+.lab-trio { display: grid; gap: 16px; grid-template-columns: repeat(3, minmax(0, 1fr)); width: 100%; text-align: left; }
+.lab-compare { display: grid; gap: 16px; grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; text-align: left; }
+@media (max-width: 720px) { .lab-trio { grid-template-columns: 1fr; } }
+@media (max-width: 560px) { .lab-compare { grid-template-columns: 1fr; } }
+.lab-trio .imgfig img, .lab-compare .imgfig img { object-fit: contain; background: #f6f8fb; }
+.lab-trio .imgfig--photo img { object-fit: cover; }
+.imgfig figcaption b { color: var(--ink); font-weight: 600; margin-right: 6px; }
+.imgfig--ours { border: 1.5px solid var(--blue); }
+.imgfig--ours figcaption b { color: var(--blue-ink); }
+
+/* 무료 테스트 상자 */
+.lab-free { display: grid; gap: 6px; justify-items: center; width: 100%; max-width: 560px; padding: 28px 24px; border: 2px solid var(--blue); border-radius: var(--r); background: var(--blue-soft); text-align: center; }
+.lab-free__label { font-size: .8rem; font-weight: 700; letter-spacing: .1em; color: var(--blue); }
+.lab-free__big { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; color: var(--ink); line-height: 1.15; letter-spacing: -0.02em; }
+.lab-free__sub { font-weight: 600; color: var(--ink); }
+.lab-free__list { list-style: none; margin: 10px 0 0; padding: 12px 0 0; border-top: 1px dashed var(--line-2); display: grid; gap: 4px; font-size: .92rem; color: var(--body); text-align: left; }
+.lab-free__list li::before { content: "· "; color: var(--blue); font-weight: 700; }
+
+/* 작은 안내 문구 */
+.lab-note { font-size: .88rem; color: var(--muted); max-width: 64ch; }
+.dp--navy .lab-note { color: var(--on-navy-muted); }

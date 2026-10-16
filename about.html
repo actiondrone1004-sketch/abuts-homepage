@@ -4,58 +4,51 @@
   <meta charset="utf-8">
   <link rel="icon" href="assets/img/abuts-mark.svg" type="image/svg+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>어벗츠 소개 | 어벗츠</title>
-  <meta name="description" content="어벗츠 소개 페이지입니다. 브랜드 이야기는 홈(index.html)에서 이어집니다.">
-  <meta property="og:title" content="어벗츠 소개 | 어벗츠">
-  <meta property="og:description" content="어벗츠 소개 페이지입니다. 브랜드 이야기는 홈(index.html)에서 이어집니다.">
+  <title>기공소 소개 | 어벗츠 기공소</title>
+  <meta name="description" content="어벗츠 기공소의 설계 기준, 제작 공정과 설비, 제조 파트너, 개발 배경을 소개합니다.">
+  <meta property="og:title" content="기공소 소개 | 어벗츠 기공소">
+  <meta property="og:description" content="어벗츠 기공소의 설계 기준, 제작 공정과 설비, 제조 파트너, 개발 배경을 소개합니다.">
   <meta property="og:type" content="website">
-  <meta http-equiv="refresh" content="0; url=index.html">
-  <link rel="canonical" href="index.html">
+  <meta property="og:image" content="https://www.abuts.kr/assets/img/abutment.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap">
   <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/lab.css">
+  <link rel="canonical" href="https://www.abuts.kr/about.html">
+  <meta property="og:url" content="https://www.abuts.kr/about.html">
+  <meta property="og:site_name" content="어벗츠 abuts">
+  <meta property="og:locale" content="ko_KR">
 </head>
 <body>
-<!-- ===== 공통 헤더 (모든 페이지 동일. 현재 페이지 메뉴 <a>에만 aria-current="page") ===== -->
 <a class="skip-link" href="#main">본문으로 건너뛰기</a>
 <header class="site-header">
   <div class="container nav">
-    <a class="brand" href="index.html" aria-label="abuts.fit 홈">
+    <a class="brand" href="index.html" aria-label="어벗츠 기공소 홈">
       <img class="brand__logo" src="assets/img/abuts-mark.svg" alt="" width="40" height="40">
-      <span class="brand__word">abuts.fit</span>
+      <span class="brand__word">abuts</span><span class="brand__ko">기공소</span>
     </a>
     <nav aria-label="주요 메뉴">
       <ul class="nav-menu">
         <li class="has-sub">
-          <a href="index.html" aria-haspopup="true" aria-current="page">어벗츠 소개</a>
+          <a href="items.html" aria-haspopup="true">제작 품목</a>
           <div class="sub">
             <ul>
-              <li><a href="dental.html">치과 이용 안내</a></li>
-              <li><a href="pricing.html">이용 방법 · 비용</a></li>
+              <li><a href="items.html">전체 품목</a></li>
+              <li><a href="abutment.html">커스텀 어벗먼트</a></li>
             </ul>
           </div>
         </li>
-        <li class="has-sub">
-          <a href="simpleway.html" aria-haspopup="true">심플웨이 소개</a>
-          <div class="sub">
-            <ul>
-              <li><a href="simpleway.html">심플웨이 소개</a></li>
-              <li><a href="simpleway-surgical.html">수술 · Surgical Kit</a></li>
-              <li><a href="simpleway-abutment.html">힐링 · 어벗먼트</a></li>
-              <li><a href="simpleway-prosthetic.html">보철 · Prosthetic Kit</a></li>
-              <li><a href="simpleway-products.html">제품 라인업</a></li>
-            </ul>
-          </div>
-        </li>
-        <li><a href="company.html">회사소개</a></li>
+        <li><a href="order.html">의뢰 방법</a></li>
+        <li><a href="pricing.html">기공료 · 납기</a></li>
+        <li><a href="about.html" aria-current="page">기공소 소개</a></li>
         <li><a href="blog.html">블로그</a></li>
-        <li><a href="contact.html">문의</a></li>
       </ul>
     </nav>
     <div class="nav-cta">
-      <a class="btn btn--ghost btn--sm" href="https://abuts.fit/login" rel="noopener">로그인</a>
-      <a class="btn btn--primary btn--sm" href="start.html">시작하기</a>
+      <a class="btn btn--ghost btn--sm" href="https://abuts.fit/login" rel="noopener">프로그램 로그인</a>
+      <a class="btn btn--primary btn--sm" href="start.html">무료 테스트 시작</a>
     </div>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-mobile" aria-label="메뉴 열기">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
@@ -64,89 +57,185 @@
   <div class="nav-mobile" id="nav-mobile">
     <div class="container">
       <ul>
-        <li class="nav-mobile__group"><span>어벗츠 소개</span>
+        <li class="nav-mobile__group"><span>제작 품목</span>
           <ul>
-            <li><a href="index.html" aria-current="page">어벗츠 소개</a></li>
-            <li><a href="dental.html">치과 이용 안내</a></li>
-            <li><a href="pricing.html">이용 방법 · 비용</a></li>
+            <li><a href="items.html">전체 품목</a></li>
+            <li><a href="abutment.html">커스텀 어벗먼트</a></li>
           </ul>
         </li>
-        <li class="nav-mobile__group"><span>심플웨이 소개</span>
-          <ul>
-            <li><a href="simpleway.html">심플웨이 소개</a></li>
-            <li><a href="simpleway-surgical.html">수술 · Surgical Kit</a></li>
-            <li><a href="simpleway-abutment.html">힐링 · 어벗먼트</a></li>
-            <li><a href="simpleway-prosthetic.html">보철 · Prosthetic Kit</a></li>
-            <li><a href="simpleway-products.html">제품 라인업</a></li>
-          </ul>
-        </li>
-        <li><a href="company.html">회사소개</a></li>
+        <li><a href="order.html">의뢰 방법</a></li>
+        <li><a href="pricing.html">기공료 · 납기</a></li>
+        <li><a href="about.html" aria-current="page">기공소 소개</a></li>
         <li><a href="blog.html">블로그</a></li>
-        <li><a href="contact.html">문의</a></li>
       </ul>
       <div class="nav-mobile__cta">
-        <a class="btn btn--ghost" href="https://abuts.fit/login" rel="noopener">로그인</a>
-        <a class="btn btn--primary" href="start.html">시작하기</a>
+        <a class="btn btn--ghost" href="https://abuts.fit/login" rel="noopener">프로그램 로그인</a>
+        <a class="btn btn--primary" href="start.html">무료 테스트 시작</a>
       </div>
     </div>
   </div>
 </header>
 
 <main id="main">
-  <section class="dp">
+<section class="dp">
     <div class="container">
       <div class="dp__inner">
-        <span class="dp-kicker">ABOUT ABUTS</span>
-        <h1 class="dp-title">어벗츠 소개</h1>
-        <p class="dp-line">어벗츠 소개는 홈에서 이어집니다.</p>
-        <div class="dp-cta"><a class="btn btn--primary" href="index.html">어벗츠 소개 보기</a></div>
+        <span class="dp-kicker">기공소 소개</span>
+        <h1 class="dp-title dp-title--xl">하단부까지 설계하는 기공소,<br>어벗츠.</h1>
+        <div class="stack stack--sm">
+          <p class="dp-line">어벗츠 기공소는 치과의 보철 의뢰를 품목 구분 없이 받습니다.</p>
+          <p class="dp-line">의뢰 · 진행 · 기공료를 어벗츠 프로그램 한곳에 모아, 치과와 기공소가 같은 기록을 봅니다.</p>
+        </div>
+        <figure class="imgfig aspect-21-9 dp__inner--wide">
+          <img src="assets/img/cnc-room-3.jpg" alt="산업용 CNC 장비가 놓인 가공실" loading="lazy">
+          <figcaption>커스텀 어벗먼트 가공 설비 · 제조 파트너 (주)애크로덴트</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="dp dp--soft" id="standard">
+    <div class="container">
+      <div class="dp__inner">
+        <span class="dp-kicker">설계 기준</span>
+        <h2 class="dp-title">보이는 면만큼,<br>보이지 않는 면도.</h2>
+        <div class="dp-pair">
+          <article class="dp-pair__item">
+            <span class="dp-pair__label">크라운이 닿는 면</span>
+            <h3 class="dp-pair__title">기공사가 설계합니다</h3>
+            <p class="dp-pair__line">어느 기공소에서나 기공사가 직접 다듬는 부분입니다.</p>
+          </article>
+          <article class="dp-pair__item">
+            <span class="dp-pair__label">커프 · 커넥션</span>
+            <h3 class="dp-pair__title">자동 연결에 맡기지 않습니다</h3>
+            <p class="dp-pair__line">CAD 프로그램이 자동으로 이어 붙이기 쉬운 구간까지 어벗츠 기공소가 한 곡선으로 설계합니다.</p>
+          </article>
+        </div>
+        <div class="dp-cta"><a class="btn btn--ghost" href="abutment.html">하단부 설계 자세히 보기</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dp" id="make">
+    <div class="container">
+      <div class="dp__inner">
+        <span class="dp-kicker">제작 · 설비</span>
+        <h2 class="dp-title">디자인부터 검사까지,<br>이어서 진행합니다.</h2>
+        <div class="flow" role="list">
+          <div class="flow__step" role="listitem"><span class="flow__num">01</span><span class="flow__name">접수</span><span class="flow__sub">프로그램 의뢰</span></div>
+          <span class="flow__arrow" aria-hidden="true">→</span>
+          <div class="flow__step" role="listitem"><span class="flow__num">02</span><span class="flow__name">디자인</span><span class="flow__sub">어벗츠 기공소</span></div>
+          <span class="flow__arrow" aria-hidden="true">→</span>
+          <div class="flow__step" role="listitem"><span class="flow__num">03</span><span class="flow__name">제작</span><span class="flow__sub">품목별 공정</span></div>
+          <span class="flow__arrow" aria-hidden="true">→</span>
+          <div class="flow__step" role="listitem"><span class="flow__num">04</span><span class="flow__name">검사</span><span class="flow__sub">출고 전 확인</span></div>
+          <span class="flow__arrow" aria-hidden="true">→</span>
+          <div class="flow__step" role="listitem"><span class="flow__num">05</span><span class="flow__name">출고</span><span class="flow__sub">묶음 · 신속</span></div>
+        </div>
+        <div class="lab-trio">
+          <figure class="imgfig imgfig--photo aspect-4-3"><img src="assets/img/machining-2.jpg" alt="CNC로 어벗먼트를 가공하는 클로즈업" loading="lazy"><figcaption><b>CNC 가공</b>커스텀 어벗먼트</figcaption></figure>
+          <figure class="imgfig imgfig--photo aspect-4-3"><img src="assets/img/cnc-room-2.jpg" alt="CNC 가공 설비" loading="lazy"><figcaption><b>가공 설비</b>산업용 CNC</figcaption></figure>
+          <figure class="imgfig imgfig--photo aspect-4-3"><img src="assets/img/inspection.jpg" alt="측정 장비로 치수를 검사하는 검사실" loading="lazy"><figcaption><b>치수 검사</b>검사 후 출고</figcaption></figure>
+        </div>
+        <div class="callout dp-visual--narrow">
+          <p>커스텀 어벗먼트 CNC 가공은 제조 파트너 <b>(주)애크로덴트</b>가 맡습니다. 식약처 의료기기 제조업 허가(제3583호)와 GMP 적합인정(KTR-ABBA-19407)을 받은 곳입니다. 위 사진은 제조 파트너의 가공실과 검사실입니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dp dp--soft" id="story">
+    <div class="container">
+      <div class="dp__inner">
+        <span class="dp-kicker">개발 배경</span>
+        <h2 class="dp-title">치과의사가<br>설계 기준과 프로그램을 만들었습니다.</h2>
+        <div class="stack stack--sm">
+          <p class="dp-line">어벗츠의 하단부 설계 기준과 의뢰 프로그램은 치과의사이자 개발자인 이준호 원장이 진료 현장의 불편에서 출발해 만들었습니다.</p>
+          <p class="dp-line">기공 의뢰를 보내는 사람의 눈으로, 다시 묻지 않아도 되는 의뢰 화면을 만들었습니다.</p>
+        </div>
+        <figure class="imgfig aspect-16-9 dp-visual--narrow">
+          <img src="assets/img/ledger-to-digital.jpg" alt="왼쪽은 손으로 쓴 장부와 영수증, 오른쪽은 노트북에 정리된 의뢰 · 정산 화면." width="1600" height="900" loading="lazy">
+          <figcaption>수기 장부에서 프로그램 화면으로</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="dp" id="contact">
+    <div class="container">
+      <div class="dp__inner">
+        <span class="dp-kicker">연락</span>
+        <h2 class="dp-title">의뢰는 프로그램으로,<br>도움은 전화로.</h2>
+        <div class="dp-pair">
+          <article class="dp-pair__item">
+            <span class="dp-pair__label">의뢰</span>
+            <h3 class="dp-pair__title">어벗츠 프로그램</h3>
+            <p class="dp-pair__line">모든 의뢰와 진행 문의는 프로그램의 의뢰 화면에서 받습니다.</p>
+            <a class="link-arrow" href="https://abuts.fit/login" rel="noopener">abuts.fit 로그인</a>
+          </article>
+          <article class="dp-pair__item">
+            <span class="dp-pair__label">가입 · 사용 도움</span>
+            <h3 class="dp-pair__title">1588-3948</h3>
+            <p class="dp-pair__line">가입, 5분 데모, 첫 의뢰 등록을 도와드립니다. 메일 contact@abuts.fit</p>
+            <a class="link-arrow" href="tel:1588-3948">전화 걸기</a>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dp dp--navy">
+    <div class="container">
+      <div class="dp__inner">
+        <span class="dp-kicker">무료 테스트</span>
+        <h2 class="dp-title">싱글 2건,<br>먼저 맡겨 보세요.</h2>
+        <div class="dp-cta">
+          <a class="btn btn--on-navy btn--lg" href="start.html">무료 테스트 시작</a>
+          <a class="btn btn--primary btn--lg" href="items.html">제작 품목 보기</a>
+        </div>
       </div>
     </div>
   </section>
 </main>
 
-<!-- ===== 공통 푸터 (모든 페이지 동일) ===== -->
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-<a class="brand" href="index.html" aria-label="abuts.fit 홈">
+        <a class="brand" href="index.html" aria-label="어벗츠 기공소 홈">
           <img class="brand__logo" src="assets/img/abuts-mark.svg" alt="" width="40" height="40">
-          <span class="brand__word">abuts.fit</span>
+          <span class="brand__word">abuts</span><span class="brand__ko">기공소</span>
         </a>
-        <p>치과의 더 나은 진료를 위한 파트너. 의뢰 내용과 파일을 보내고, 제작 진행부터 배송·정산까지 이어서 확인하세요.</p>
+        <p>임플란트 보철부터 크라운까지 받는 치과기공소. 의뢰는 어벗츠 프로그램(abuts.fit)으로 받습니다.</p>
         <ul class="footer-contact">
+          <li><a href="tel:1588-3948">1588-3948</a> · 가입 · 프로그램 사용 도움</li>
           <li><a href="mailto:contact@abuts.fit">contact@abuts.fit</a></li>
-          <li><a href="tel:1588-3948">1588-3948</a></li>
-          <li>경상남도 거제시 거제중앙로29길 6, 3층(고현동)</li>
         </ul>
-        <p class="small">치과의사·개발자 이준호 원장이 만들었습니다.</p>
       </div>
       <div class="footer-col">
-        <h3>어벗츠</h3>
+        <h3>기공소</h3>
         <ul>
-          <li><a href="index.html">어벗츠 소개</a></li>
-          <li><a href="start.html">시작하기</a></li>
-          <li><a href="guide.html">활용 가이드 · 소식</a></li>
+          <li><a href="items.html">제작 품목</a></li>
+          <li><a href="abutment.html">커스텀 어벗먼트</a></li>
+          <li><a href="about.html" aria-current="page">기공소 소개</a></li>
           <li><a href="blog.html">블로그</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h3>서비스 · 심플웨이</h3>
+        <h3>이용</h3>
         <ul>
-          <li><a href="dental.html">치과 이용 안내</a></li>
-          <li><a href="pricing.html">이용 방법 · 비용</a></li>
-          <li><a href="simpleway.html">심플웨이 소개</a></li>
+          <li><a href="order.html">의뢰 방법</a></li>
+          <li><a href="pricing.html">기공료 · 납기</a></li>
+          <li><a href="start.html">무료 테스트 시작</a></li>
+          <li><a href="pricing.html#faq">자주 묻는 질문</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h3>회사 · 문의</h3>
+        <h3>어벗츠 프로그램</h3>
         <ul>
-          <li><a href="company.html">회사소개</a></li>
-          <li><a href="contact.html">문의</a></li>
-          <li><a href="pricing.html">자주 묻는 질문</a></li>
-          <li><a href="https://abuts.fit/help" rel="noopener">서비스 고객센터</a></li>
-          <li><a href="https://abuts.fit/manual" rel="noopener">사용 매뉴얼</a></li>
+          <li><a href="https://abuts.fit/login" rel="noopener">프로그램 로그인</a></li>
+          <li><a href="https://abuts.fit/signup" rel="noopener">가입하기</a></li>
+          <li><a href="https://abuts.fit/help" rel="noopener">프로그램 고객센터</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -160,13 +249,14 @@
       </div>
     </div>
     <div class="footer-legal">
-      <div>어벗츠 주식회사 | 대표자: 배태완 | 사업자등록번호: 358-87-03514 | 법인등록번호: 194911-0007687 | 통신판매업신고번호: 해당 없음</div>
+      <div>어벗츠 기공소 · 의뢰 프로그램 abuts.fit 운영 및 기공료 결제: 어벗츠 주식회사 | 대표자: 배태완 | 사업자등록번호: 358-87-03514</div>
       <div>주소: 경상남도 거제시 거제중앙로29길 6, 3층(고현동) | 유선번호: 1588-3948 | 고객지원: support@abuts.fit | 사업 문의: business@abuts.fit</div>
-      <div>의료기기 정보는 허가·인증 자료를 기준으로 하며, 사용 전 첨부문서를 확인하십시오.</div>
-      <div>© 2026 어벗츠 주식회사. All rights reserved.</div>
+      <div>커스텀 어벗먼트 CNC 가공: 제조 파트너 (주)애크로덴트. 의료기기 정보는 허가 · 인증 자료를 기준으로 하며, 사용 전 첨부문서를 확인하십시오.</div>
+      <div>© 2026 어벗츠. All rights reserved.</div>
     </div>
   </div>
 </footer>
+
 <script src="assets/site.js"></script>
 </body>
 </html>
