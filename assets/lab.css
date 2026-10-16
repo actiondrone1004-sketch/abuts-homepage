@@ -76,3 +76,17 @@ a.lab-card:hover { border-color: var(--blue); color: var(--body); transform: tra
 /* 작은 안내 문구 */
 .lab-note { font-size: .88rem; color: var(--muted); max-width: 64ch; }
 .dp--navy .lab-note { color: var(--on-navy-muted); }
+
+/* 기공소 소개 · 개발자 프로필 카드 */
+.dev-card { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; width: 100%; padding: 20px; background: var(--paper); border: 1px solid var(--line); border-radius: var(--r); box-shadow: var(--shadow-sm); text-align: left; }
+.dev-card__media { position: relative; margin: 0; min-height: 300px; border-radius: var(--r-sm); overflow: hidden; background: var(--mist); }
+.dev-card__media img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+.dev-card__text { align-self: center; }
+.dev-card__badge { position: absolute; left: 12px; bottom: 12px; padding: 5px 10px; border-radius: 999px; background: rgba(15, 31, 61, .82); color: #fff; font-family: var(--mono); font-size: .72rem; font-weight: 600; letter-spacing: .12em; }
+.dev-card__name { margin: 0; font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.2; color: var(--ink); }
+.dev-card__role { margin: 6px 0 0; font-size: .95rem; color: var(--muted); }
+.dev-card__quote { margin: 18px 0 0; padding-left: 14px; border-left: 3px solid var(--blue); font-size: 1.05rem; font-weight: 600; color: var(--ink); }
+.dev-card__bio { margin: 14px 0 0; font-size: 1rem; color: var(--body); }
+.dev-card__points { list-style: none; margin: 16px 0 0; padding: 14px 0 0; border-top: 1px dashed var(--line-2); display: grid; gap: 6px; font-size: .95rem; color: var(--body); }
+.dev-card__points li::before { content: "· "; color: var(--blue); font-weight: 700; }
+@media (max-width: 860px) { .dev-card { grid-template-columns: 1fr; gap: 20px; padding: 16px; } .dev-card__media { min-height: 0; aspect-ratio: 4 / 3; } }
